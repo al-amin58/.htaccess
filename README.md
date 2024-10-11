@@ -1,4 +1,4 @@
-"#//--------------------------- .htaccess" -----------------------------**//
+"#//--------------------------- .htaccess -----------------------------**//"
 
 <IfModule mod_rewrite.c>
     <IfModule mod_negotiation.c>
@@ -22,14 +22,13 @@
 
 
 
-//**--------------------Server.php--------------------------------**//
+"#//**--------------------Server.php--------------------------------**//"
 
+Options -MultiViews
 <?php
-
     $uri = urldecode(
         parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH)
     );
-
 if ($uri !== '/' && file_exists(__DIR__.'/public'.$uri)) {
     return false;
 }
